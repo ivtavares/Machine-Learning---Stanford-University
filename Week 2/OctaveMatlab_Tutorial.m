@@ -41,4 +41,18 @@ v=A*x;
 for i = 1:7
   z = z + v(i) * w(i);
 end
-%z = sum (v .* w);
+z = sum (v .* w);
+z = w' * v;
+
+%Question 5
+clc
+clear
+X = rand(7);
+for i = 1:7
+  for j = 1:7
+    A(i, j) = log(X(i, j));
+    B(i, j) = X(i, j) ^ 2;
+    C(i, j) = X(i, j) + 1;
+    D(i, j) = X(i, j) / 4;
+  end
+end
